@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    allow:
+      - dependency-type: "direct"
+        update-type: "semver:minor"
+    commit-message:
+      prefix: "deps"
